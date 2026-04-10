@@ -36,3 +36,5 @@ app.post("/buy-data", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log("Server running..."));
+npm install
+npm run dev
