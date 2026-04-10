@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Sticky Data</h1>
+    <p>Fast & Reliable Data Bundles</p>
+
+    <input type="text" id="phone" placeholder="Enter phone number">
+
+    <select id="network">
+        <option value="MTN">MTN</option>
+        <option value="Telecel">Telecel</option>
+        <option value="AirtelTigo">AirtelTigo</option>
+    </select>
+
+    <select id="bundle">
+        <option value="1GB">1GB - GHS 6</option>
+        <option value="2GB">2GB - GHS 10</option>
+        <option value="5GB">5GB - GHS 20</option>
+    </select>
+
+    <button onclick="buyData()">Buy Now</button>
+
+    <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
