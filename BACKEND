@@ -1,0 +1,38 @@
+const express = require("express");
+const axios = require("axios");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+app.use(express.static("public"));
+
+const PORT = process.env.PORT || 3000;
+
+// 🔐 Replace with your real API key later
+const API_KEY = process.env.API_KEY || "test_key";
+
+app.post("/buy-data", async (req, res) => {
+    const { phone, bundle, network } = req.body;
+
+    try {
+        // 🔌 Replace with REAL API (Hubtel / Reloadly)
+        const response = await axios.post("https://api-provider.com/data", {
+            phone,
+            bundle,
+            network
+        }, {
+            headers: {
+                Authorization: `Bearer ${API_KEY}`
+            }
+        });
+
+        res.json({ success: true });
+
+    } catch (error) {
+        res.json({ success: false });
+    }
+});
+
+app.listen(PORT, () => console.log("Server running..."));
