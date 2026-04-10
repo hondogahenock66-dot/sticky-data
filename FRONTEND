@@ -24,7 +24,9 @@
         <option value="5GB">5GB - GHS 20</option>
     </select>
 
-    <button onclick="buyData()">Buy Now</button>
+    <button onclick="or buyData()">Buy Now</button>
+npm install
+npm run dev
 
     <p id="result"></p>
 </div>
