@@ -10,14 +10,14 @@ app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
 
-// 🔐 Replace with your real API key later
+// Replace with your real API key later
 const API_KEY = process.env.API_KEY || "test_key";
 
 app.post("/buy-data", async (req, res) => {
     const { phone, bundle, network } = req.body;
 
     try {
-        // 🔌 Replace with REAL API (Hubtel / Reloadly)
+        // Replace with REAL API (Hubtel / Reloadly)
         const response = await axios.post("https://api-provider.com/data", {
             phone,
             bundle,
@@ -38,3 +38,7 @@ app.post("/buy-data", async (req, res) => {
 app.listen(PORT, () => console.log("Server running..."));
 npm install
 npm run dev
+
+app.get("/", (req, res) => {
+  res.send("Sticky Data API is running ");
+});
