@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
 
-// Replace with your real API key later
+Replace with your real API key later
 const API_KEY = process.env.API_KEY || "test_key";
 
 app.post("/buy-data", async (req, res) => {
